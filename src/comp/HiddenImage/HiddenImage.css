@@ -1,0 +1,57 @@
+.hidden-image-container {
+    position: relative;
+    width: 100%;
+    transition: .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden-image {
+    width: 100%;
+    filter: grayscale(1);
+}
+
+.hidden-image-container .button-and-text-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #dddddd00;
+    transition: .4s linear;
+}
+.hidden-image-container .button-and-text-container .text-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 8px;
+    padding-top: 16px;
+    transition: .4s linear;
+}
+
+.hidden-image-container .button-and-text-container span {
+    padding: 4px;
+    width: 100%;
+    text-align: center;
+}
+
+.hidden-image-container .button-and-text-container.blur {
+    background-color: #ddd;
+}
+
+.hide-text {
+    opacity: 0;
+}
+
+.toggle-fade-text {
+    position: absolute;
+    bottom: 0px;
+    padding: 8px;
+    padding-bottom: 16px;
+    text-align: center;
+    transition: .4s;
+}

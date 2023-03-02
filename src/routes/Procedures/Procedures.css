@@ -1,0 +1,36 @@
+.procedure-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 8px;
+    padding-bottom: 36px;
+}
+
+.procedure-container h3 {
+    padding-bottom: 8px;
+    color: #002E5D;
+}
+
+.procedure-container .before-and-after-photos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.procedure-container .before-and-after-photos .procedure-photo {
+    width: 48%;
+}
+
+.procedure-container .before-and-after-photos .procedure-photo > img {
+    width: 100%;
+}
+
+.chip {
+    background-color: #eee;
+    border: 1px solid lightgray;
+    color: black;
+    padding: 4px 12px;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    border-radius: 16px;
+}

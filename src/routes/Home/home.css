@@ -1,0 +1,15 @@
+#dr-teela-portrait-pic {
+    background-image: url('../../assets//dad-profile.jpg');
+    max-width: 960px;
+    max-height: 640px;
+    width: 100vw;
+    height: 66.7vw;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  #main-bio p span {
+    color: #004a95;
+    font-weight: 600;
+  }
