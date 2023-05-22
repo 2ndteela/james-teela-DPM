@@ -5,9 +5,32 @@
     width: 100vw;
     height: 66.7vw;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
   }
+
+  #dr-teela-outside-center {
+    background-image: url('../../assets//dr-teela.jpeg');
+    max-width: 960px;
+    max-height: 640px;
+    width: 100vw;
+    height: 66.7vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #dr-teela-hike {
+    background-image: url('../../assets//dr-teela-hike.jpeg');
+    max-width: 960px;
+    max-height: 640px;
+    width: 100vw;
+    height: 66.7vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
 
   #main-bio p span {
     color: #004a95;

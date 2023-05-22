@@ -1,18 +1,31 @@
 
+import React from 'react'
 import './home.css'
+import {Button, Carousel} from 'antd'
 
 export default function Home() {
+
+    function openNewWindow() {
+        window.open('https://www.sisurgicalservices.com/', '_blank')
+    }
+
     return (
         <div id='main-bio' >
-            <div id='dr-teela-portrait-pic'></div>
+            <Carousel autoplay>
+                <div id='dr-teela-outside-center' />
+                <div id='dr-teela-portrait-pic' />
+                <div id='dr-teela-hike' />
+            </Carousel>
             <div style={{padding: '16px'}} >
-                
+                <div style={{display: 'flex', width: '100%', justifyContent: 'center' }}>
+                    <Button type='primary'  onClick={openNewWindow}>Schedule an appointment now</Button>
+                </div>
                 <p>
                     Dr. James Teela is an experienced and qualified Podiatrist with an extensive background in various health care settings. 
                     Proudly serving The Central Valley since 2015, Dr. Teela's practice extends from Reedly to Delano as well as Porterville and Visalia. 
                     His responsibilities have included diagnostic, therapeutic and preventive foot care services to patients of all ages, specializing 
                     in diabetic foot wound care and limb preservation. Dr. Teela has also conducted many foot and ankle surgeries contributing his talents 
-                    to Bakersfield Surgery Center, Delano Regional Medical Center and Tulare Regional Medical Center.
+                    to work in the local hospitals and surgery centers of The Valley.
                 </p>
 
                 <p>

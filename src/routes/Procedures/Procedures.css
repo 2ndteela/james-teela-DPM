@@ -9,7 +9,11 @@
 .procedure-container h3 {
     padding-bottom: 8px;
     color: #002E5D;
+    display: flex;
+    align-items: center;
 }
+
+
 
 .procedure-container .before-and-after-photos {
     display: flex;
@@ -33,4 +37,11 @@
     margin-bottom: 8px;
     margin-right: 8px;
     border-radius: 16px;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+}
+
+.is-link:hover {
+    cursor: pointer;
 }

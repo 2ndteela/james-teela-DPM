@@ -1,3 +1,4 @@
+import { Button } from 'antd'
 import './Locations.css'
 
 const styles = {
@@ -49,24 +50,23 @@ const locations = [
 
 export default function Locations() {
 
-    function goToGoogleMaps(url) {
+    function goToURL(url) {
         window.open(url, '_blank')
     }
 
+
     return (
         <div className="route-container" id="contacts-container" >
-            <div style={styles.alignCenter} >Come see Dr. Teela at</div>
-            <h3 style={{...styles.alignCenter, ...styles.bold, padding: '8px 0'}} >Sequoia Institute for Surgical Services</h3>
+            <div style={{...styles.alignCenter, paddingBottom: '8px'}} >Come see Dr. Teela at</div>
+            <Button onClick={() => goToURL('https://www.sisurgicalservices.com/')} type='primary' >Sequoia Institute for Surgical Services</Button>
             <br />
-            <div style={styles.alignCenter} >For new appointments, call or text</div>
+            <div style={styles.alignCenter} >or call or text</div>
             <h3 style={{...styles.alignCenter, ...styles.bold, padding: '8px 0'}} >(559)-731-2009</h3>
             
 
- 
-        
             <div id="location-cards">
                 {locations.map(l => (
-                    <div className="map-and-address" onClick={() => goToGoogleMaps(l.url)} >
+                    <div className="map-and-address" onClick={() => goToURL(l.url)} >
                         <img src={require(`../../assets/locations/${l.img}.png`)} alt={l.address} />
                         <div>{l.address}</div>
                         <div>{l.city} {l.state}, {l.zip}</div>

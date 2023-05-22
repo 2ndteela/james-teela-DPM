@@ -65,7 +65,11 @@ const links = [
     {
         text: 'Procedures and Services',
         path: 'procedures'
-    }
+    },
+    // {
+    //     text: 'Lapiplasty Certification',
+    //     path: 'lapiplasty'
+    // }
 ]
 
 export default function Header() {

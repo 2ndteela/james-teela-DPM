@@ -9,13 +9,15 @@ import AnkleRepairPre from '../../assets/surgical-images/ankle-repair-pre.jpeg'
 import AnkleRepairPost from '../../assets/surgical-images/ankle-repair-post.jpeg'
 import BunionectomyPre from '../../assets/surgical-images/bunionectomy-pre.jpeg'
 import BunionectomyPost from '../../assets/surgical-images/bunionectomy-post.jpeg'
+import { BsQuestionCircle } from "react-icons/bs"
 
 const procedureList = [
     {
-        name: 'Bunionectomy',
+        name: 'Bunionectomy (Lapiplasty)',
         beforeImage: BunionectomyPre,
         afterImage: BunionectomyPost,
-        show: true
+        show: true,
+        link: 'https://www.lapiplasty.com/lapiplasty-3d-bunion-correction/about-lapiplasty/'
     },
     {
         name: 'Ankle Fracture Repair',
@@ -36,6 +38,8 @@ const procedureList = [
 ] 
 
 const otherServices = [
+    'Lapiplasty',
+    'Bunions',
     'Foot and Ankle surgery',
     'Diabetic Foot Care',
     'Wound Care',
@@ -44,26 +48,29 @@ const otherServices = [
     'Plantar Warts',
     'Painful Callouses',
     'Hammer Toes',
-    'Bunions',
     'Plantar Fascitis',
     'Tendonitis',
     'Fractures and Dislocations',
     'Board Certified in Podiatric Medicine',
     ]
 
+    function goToLapiplasty() {
+        window.open('https://www.lapiplasty.com/lapiplasty-3d-bunion-correction/about-lapiplasty/', '_blank')
+    }
+
 export default function Proceedures() {
     return(
         <div className="route-container" >
             <h2 style={{ paddingBottom: '8px'}} >All Services</h2>
             <div style={{display: 'flex', flexWrap:'wrap'}} >
-                {otherServices.map(s => <div className="chip" >{s}</div>)}
+                {otherServices.map(s => <h2 className={`chip`} >{s} {s === 'Lapiplasty' && <BsQuestionCircle className="is-link" onClick={goToLapiplasty} style={{paddingLeft: '8px', fontSize: '1.4em'}} /> } </h2>)}
             </div>
             <br />
             <h2>Example Procedures</h2>
             {
                 procedureList.map(p => (
-                    <div className="procedure-container">
-                        <h3>{p.name}</h3>
+                    <div className={`procedure-container`}>
+                        <h3>{p.name} {p.link && <BsQuestionCircle className="is-link" onClick={goToLapiplasty} style={{paddingLeft: '8px', fontSize: '1.4em'}} />} </h3>
                         <div className="before-and-after-photos" >
                             <div className="procedure-photo">
                                 <h4>Before</h4>
