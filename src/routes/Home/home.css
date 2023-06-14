@@ -36,3 +36,61 @@
     color: #004a95;
     font-weight: 600;
   }
+
+  .text-banner {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #002e5d;
+    color: white;
+    max-width: 960px;
+    max-height: 640px;
+    width: 100vw;
+    height: 66.7vw;
+  }
+
+  .text-banner h1, h2, h3 {
+    text-align: center;
+  }
+
+  .text-banner h1 {
+    font-size: 64px;
+  }
+
+  .text-banner h2 {
+    color: lightgray;
+  }
+
+  .links-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .links-divider {
+    padding: 0 8px;
+  }
+
+  @media screen and (max-width: 512px) {
+    .text-banner h1 {
+      font-size: 36px;
+    }
+
+    .text-banner h2 {
+      font-size: 18px;
+    }
+
+    .links-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .links-container a:first-child {
+      padding-bottom: 16px;
+    }
+
+    .links-divider {
+      display: none;
+    }
+}

@@ -13,20 +13,24 @@ import BunionectomyPost from '../../assets/surgical-images/bunionectomy-post.jpe
 import multipleBunionectomyPre from '../../assets/surgical-images/multiple-bunionectamy-pre.jpeg'
 import multipleBunionectomyPost from '../../assets/surgical-images/multiple-bunionectamy-post.jpeg'
 
+
+const lapiplastyURL = 'https://www.lapiplasty.com/lapiplasty-3d-bunion-correction/about-lapiplasty/'
+const adductoplastyURL = 'https://www.lapiplasty.com/surgeons/other-products/adductoplasty-system/'
+
 const procedureList = [
     {
         name: 'Bunionectomy (Lapiplasty)',
         beforeImage: BunionectomyPre,
         afterImage: BunionectomyPost,
         show: true,
-        link: 'https://www.lapiplasty.com/lapiplasty-3d-bunion-correction/about-lapiplasty/'
+        link: lapiplastyURL
     },
     {
-        name: 'Multiple Bunionectomy (Lapiplasty)',
+        name: 'Several Bunionectomy (Adductoplasty)',
         beforeImage: multipleBunionectomyPre,
         afterImage: multipleBunionectomyPost,
         show: true,
-        link: 'https://www.lapiplasty.com/lapiplasty-3d-bunion-correction/about-lapiplasty/'
+        link: adductoplastyURL
     },
     {
         name: 'Ankle Fracture Repair',
@@ -48,6 +52,7 @@ const procedureList = [
 
 const otherServices = [
     'Lapiplasty',
+    'Adductoplasty',
     'Bunions',
     'Foot and Ankle surgery',
     'Diabetic Foot Care',
@@ -63,23 +68,26 @@ const otherServices = [
     'Board Certified in Podiatric Medicine',
     ]
 
-    function goToLapiplasty() {
-        window.open('https://www.lapiplasty.com/lapiplasty-3d-bunion-correction/about-lapiplasty/', '_blank')
-    }
-
 export default function Proceedures() {
     return(
         <div className="route-container" >
             <h2 style={{ paddingBottom: '8px'}} >All Services</h2>
             <div style={{display: 'flex', flexWrap:'wrap'}} >
-                {otherServices.map(s => <h2 className={`chip`} >{s} {s === 'Lapiplasty' && <BsQuestionCircle className="is-link" onClick={goToLapiplasty} style={{paddingLeft: '8px', fontSize: '1.4em'}} /> } </h2>)}
+                {otherServices.map(s => (
+                    <h2 className={`chip`} >
+                        {s} 
+                        {s === 'Lapiplasty' && <a href={lapiplastyURL} className="link-styles" ><BsQuestionCircle className="is-link"  /> </a> }
+                        {s === 'Adductoplasty' && <a href={adductoplastyURL} className="link-styles"> <BsQuestionCircle className="is-link" /> </a>} 
+
+                    </h2>)
+                )}
             </div>
             <br />
             <h2>Example Procedures</h2>
             {
                 procedureList.map(p => (
                     <div className={`procedure-container`}>
-                        <h3>{p.name} {p.link && <BsQuestionCircle className="is-link" onClick={goToLapiplasty} style={{paddingLeft: '8px', fontSize: '1.4em'}} />} </h3>
+                        <h3>{p.name} {p.link && <a href={p.link} target="_blank" className="link-styles" rel="noreferrer" ><BsQuestionCircle className="is-link" /></a>}</h3>
                         <div className="before-and-after-photos" >
                             <div className="procedure-photo">
                                 <h4>Before</h4>

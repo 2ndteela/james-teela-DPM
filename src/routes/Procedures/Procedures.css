@@ -45,3 +45,10 @@
 .is-link:hover {
     cursor: pointer;
 }
+
+.link-styles {
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    color: #0051a3;
+}
