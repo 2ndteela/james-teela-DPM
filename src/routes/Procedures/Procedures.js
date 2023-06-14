@@ -1,5 +1,6 @@
 import HiddenImage from "../../comp/HiddenImage/HiddenImage"
 import "./Procedures.css"
+import { BsQuestionCircle } from "react-icons/bs"
 
 import DiabeticWoundPre from '../../assets/surgical-images/diabetic-pre.jpeg'
 import DiabeticWoundPost from '../../assets/surgical-images/diabetic-post.jpeg'
@@ -9,13 +10,21 @@ import AnkleRepairPre from '../../assets/surgical-images/ankle-repair-pre.jpeg'
 import AnkleRepairPost from '../../assets/surgical-images/ankle-repair-post.jpeg'
 import BunionectomyPre from '../../assets/surgical-images/bunionectomy-pre.jpeg'
 import BunionectomyPost from '../../assets/surgical-images/bunionectomy-post.jpeg'
-import { BsQuestionCircle } from "react-icons/bs"
+import multipleBunionectomyPre from '../../assets/surgical-images/multiple-bunionectamy-pre.jpeg'
+import multipleBunionectomyPost from '../../assets/surgical-images/multiple-bunionectamy-post.jpeg'
 
 const procedureList = [
     {
         name: 'Bunionectomy (Lapiplasty)',
         beforeImage: BunionectomyPre,
         afterImage: BunionectomyPost,
+        show: true,
+        link: 'https://www.lapiplasty.com/lapiplasty-3d-bunion-correction/about-lapiplasty/'
+    },
+    {
+        name: 'Multiple Bunionectomy (Lapiplasty)',
+        beforeImage: multipleBunionectomyPre,
+        afterImage: multipleBunionectomyPost,
         show: true,
         link: 'https://www.lapiplasty.com/lapiplasty-3d-bunion-correction/about-lapiplasty/'
     },

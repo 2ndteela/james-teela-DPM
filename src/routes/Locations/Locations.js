@@ -1,4 +1,4 @@
-import { Button } from 'antd'
+import { Button, Card } from 'antd'
 import './Locations.css'
 
 const styles = {
@@ -38,14 +38,14 @@ const locations = [
         url: 'https://www.google.com/maps/place/936+G+St,+Reedley,+CA+93654/@36.5983503,-119.4547158,17z/data=!3m1!4b1!4m6!3m5!1s0x8094e2c4d3af20cd:0xea9e581688c02544!8m2!3d36.5983503!4d-119.4525271!16s%2Fg%2F11bw3z9p75',
         schedule: ['Friday']
     },
-//     {
-//         address: '550 West Grangeville Blvd',
-//         city: 'Handford',
-//         state: 'CA',
-//         zip: '93230',
-//         img: '550WestGrangeville',
-//         url: 'https://www.google.com/maps/place/500+W+Grangeville+Blvd,+Hanford,+CA+93230/@36.3426824,-119.6539309,17z/data=!3m1!4b1!4m5!3m4!1s0x8094c3a0f1b120e9:0x769b09e9d7562070!8m2!3d36.3426824!4d-119.6517422'
-//     }
+    // {
+    //     address: '550 West Grangeville Blvd',
+    //     city: 'Handford',
+    //     state: 'CA',
+    //     zip: '93230',
+    //     img: '550WestGrangeville',
+    //     url: 'https://www.google.com/maps/place/500+W+Grangeville+Blvd,+Hanford,+CA+93230/@36.3426824,-119.6539309,17z/data=!3m1!4b1!4m5!3m4!1s0x8094c3a0f1b120e9:0x769b09e9d7562070!8m2!3d36.3426824!4d-119.6517422'
+    // }
 ]
 
 export default function Locations() {
@@ -53,6 +53,10 @@ export default function Locations() {
     function goToURL(url) {
         window.open(url, '_blank')
     }
+
+    const { Meta } = Card;
+
+    const screenWidth = window.screen.width
 
 
     return (
@@ -62,15 +66,24 @@ export default function Locations() {
             <br />
             <div style={styles.alignCenter} >or call or text</div>
             <h3 style={{...styles.alignCenter, ...styles.bold, padding: '8px 0'}} >(559)-731-2009</h3>
-            
 
             <div id="location-cards">
                 {locations.map(l => (
-                    <div className="map-and-address" onClick={() => goToURL(l.url)} >
-                        <img src={require(`../../assets/locations/${l.img}.png`)} alt={l.address} />
-                        <div>{l.address}</div>
-                        <div>{l.city} {l.state}, {l.zip}</div>
-                        <div style={{padding: '8px 0px'}} >In Office: {l.schedule.join(', ')}</div>
+                    <div style={{
+                        paddingTop: screenWidth > 512 ? '0px' : '16px',
+                        paddingRight: screenWidth < 512 ? '0px' : '8px',
+                        flexGrow: '0',
+                        minWidth: '232px',
+                        maxWidth: screenWidth > 512 ? '33%' : '100%'
+                    }}>
+                        <Card 
+                            hoverable 
+                            onClick={() => goToURL(l.url)} 
+                            cover={<img src={require(`../../assets/locations/${l.img}.jpeg`)} alt={l.address} />} 
+                        >
+                            <Meta title={`${l.city}, ${l.state}`} description={`${l.address}`} />
+                            <div style={{padding: '8px 0px'}} >In Office: {l.schedule.join(', ')}</div>
+                        </Card>
                     </div>
                 ))}
             </div>

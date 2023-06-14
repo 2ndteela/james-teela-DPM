@@ -2,6 +2,7 @@
 import React from 'react'
 import './home.css'
 import {Button, Carousel} from 'antd'
+import { BsInstagram } from 'react-icons/bs'
 
 export default function Home() {
 
@@ -43,6 +44,16 @@ export default function Home() {
                     A proud father of six children, Dr. Teela and his wife enjoy spending time with their family. Skiing in Utah and hiking in 
                     Sequoia National Forest are among his favorite hobbies. 
                 </p>
+
+                <a 
+                    style={{display: 'flex', alignItems: 'center', textDecoration: 'none', color: '#002E5D'}} 
+                    href="https://www.instagram.com/drjamesteela/" 
+                    target='_blank' 
+                    rel="noreferrer" 
+                >
+                    <BsInstagram /> 
+                    <div style={{paddingLeft: '8px'}} >Follow Dr. Teela on Instagram</div>
+                </a>
             </div>
         </div>
     )
