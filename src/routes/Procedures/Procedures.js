@@ -26,7 +26,7 @@ const procedureList = [
         link: lapiplastyURL
     },
     {
-        name: 'Several Bunionectomy (Adductoplasty)',
+        name: 'Severe Bunionectomy (Adductoplasty)',
         beforeImage: multipleBunionectomyPre,
         afterImage: multipleBunionectomyPost,
         show: true,
