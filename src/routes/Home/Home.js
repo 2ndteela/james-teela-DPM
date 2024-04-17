@@ -4,6 +4,33 @@ import './home.css'
 import {Carousel} from 'antd'
 import { BsCalendarPlus, BsInstagram } from 'react-icons/bs'
 
+const links = [
+    {
+        text: 'Schedule an appointment now',
+        url: 'https://www.wetreatyourfeet.com/doctors/dr-teela/',
+        Icon: BsCalendarPlus
+    },
+    {
+        text: 'Follow Dr. Teela on Instagram',
+        url: 'https://www.instagram.com/drjamesteela/',
+        Icon: BsInstagram
+    },
+    {
+        text: 'Schedule an appointment now',
+        url: 'https://www.wetreatyourfeet.com/doctors/dr-teela/',
+    }
+]
+
+const baseLinkStyles = {
+    textDecoration: 'none',
+    color: '#0051a3'
+}
+
+const alignCenterStyles = {
+    display: 'flex', 
+    alignItems: 'center',
+}
+
 export default function Home() {
     return (
         <div id='main-bio' >
@@ -20,24 +47,24 @@ export default function Home() {
                     <h1>Primary Podiatry Care</h1>
                     <h2>Ingrown Toenails, Fungus nails and much more</h2>
                 </div>
-                <div id='dr-teela-portrait-pic' />
             </Carousel>
             <div style={{padding: '16px'}} >
-                <div className='links-container' >
-                    <a href="https://www.sisurgicalservices.com/" target='_blank' rel="noreferrer" style={{display: 'flex', alignItems: 'center', textDecoration: 'none', color: '#0051a3'}}>
-                        <BsCalendarPlus />
-                        <div style={{paddingLeft: '8px'}}>Schedule an appointment now</div>
-                    </a>
-                    <div className='links-divider' >|</div>
-                    <a 
-                        style={{display: 'flex', alignItems: 'center', textDecoration: 'none', color: '#0051a3'}} 
-                        href="https://www.instagram.com/drjamesteela/" 
-                        target='_blank' 
-                        rel="noreferrer" 
-                    >
-                        <BsInstagram /> 
-                        <div style={{paddingLeft: '8px'}} >Follow Dr. Teela on Instagram</div>
-                    </a>
+                <div className='links-container'>
+                    {links.map((l, idx) => (
+                    <>
+                        <a style={l?.Icon ? {...baseLinkStyles, ...alignCenterStyles} : baseLinkStyles} href={l.url} target='_blank' rel="noreferrer" >
+                            {l.Icon ? (
+                                <>
+                                    <l.Icon /> 
+                                    <div style={{paddingLeft: '8px'}} >{l.text}</div>
+                                </>
+                            ) : <>{l.text}</>
+                            }
+                        </a>
+                        {idx !== links.length - 1 && <div className='links-divider' >|</div>}
+                    </>
+                )
+                )}
                 </div>
 
                 <p>

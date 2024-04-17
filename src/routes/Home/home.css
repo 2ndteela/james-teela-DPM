@@ -1,5 +1,5 @@
 #dr-teela-portrait-pic {
-    background-image: url('../../assets//dad-profile.jpg');
+    background-image: url('../../assets//dr-teela.jpeg');
     max-width: 960px;
     max-height: 640px;
     width: 100vw;
@@ -10,7 +10,7 @@
   }
 
   #dr-teela-outside-center {
-    background-image: url('../../assets//dr-teela.jpeg');
+    background-image: url('../../assets//dr-teela-portait-2.jpeg');
     max-width: 960px;
     max-height: 640px;
     width: 100vw;

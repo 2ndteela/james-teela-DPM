@@ -58,10 +58,10 @@ const links = [
         text: 'James Teela DPM',
         path: ''
     },
-    {
-        text: 'Locations and Information',
-        path: 'locations'
-    },
+    // {
+    //     text: 'Locations and Information',
+    //     path: 'locations'
+    // },
     {
         text: 'Procedures and Services',
         path: 'procedures'
