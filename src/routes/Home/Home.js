@@ -14,10 +14,6 @@ const links = [
         text: 'Follow Dr. Teela on Instagram',
         url: 'https://www.instagram.com/drjamesteela/',
         Icon: BsInstagram
-    },
-    {
-        text: 'Schedule an appointment now',
-        url: 'https://www.wetreatyourfeet.com/doctors/dr-teela/',
     }
 ]
 
